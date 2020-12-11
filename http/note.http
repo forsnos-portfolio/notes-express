@@ -1,0 +1,46 @@
+GET http://{{host}}/notes?offset=0&limit=10
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+GET http://{{host}}/notes/a51eb789-6814-4c4f-94af-a520214bb6d7
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+PUT http://{{host}}/notes
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "guid": "a51eb789-6814-4c4f-94af-a520214bb6d7",
+  "note": "заметка1232131"
+}
+
+###
+POST http://{{host}}/notes
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "note": "заметка"
+}
+
+###
+DELETE http://{{host}}/notes/31f3c3a9-e90d-4065-9b82-4961bad1dd34
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+POST http://{{host}}/notes/share
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "guid": "a51eb789-6814-4c4f-94af-a520214bb6d7"
+}
+
+###
+GET http://{{host}}/notes/share/6508cd92487af7c21837582af6b478e48e14d763
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}

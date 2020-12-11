@@ -1,0 +1,32 @@
+POST http://{{host}}/security/signUp
+Content-Type: application/json
+
+{
+  "email": "rick-c-137@gmail.com",
+  "password": "password"
+}
+
+###
+POST http://{{host}}/security/signIn
+Content-Type: application/json
+
+{
+  "email": "rick-c-137@gmail.com",
+  "password": "password"
+}
+
+###
+POST http://{{host}}/security/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
+
+###
+POST http://{{host}}/security/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
